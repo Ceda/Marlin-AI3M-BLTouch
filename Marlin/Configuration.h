@@ -380,9 +380,13 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // i3 Mega stock v5 hotend, 40W heater cartridge (3.6Ω @ 22°C)
-  #define  DEFAULT_Kp 18.58
-  #define  DEFAULT_Ki 1.38
-  #define  DEFAULT_Kd 62.40
+  // #define  DEFAULT_Kp 18.58
+  // #define  DEFAULT_Ki 1.38
+  // #define  DEFAULT_Kd 62.40
+
+  #define DEFAULT_Kp 15.45
+  #define DEFAULT_Ki 1.07
+  #define DEFAULT_Kd 56.00
 
   // Ultimaker
   //#define  DEFAULT_Kp 22.2
