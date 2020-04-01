@@ -367,6 +367,7 @@
 #define BANG_MAX 255     // Limits current to nozzle while in bang-bang mode; 255=full current
 #define PID_MAX BANG_MAX // Limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
 #define PID_K1 0.95      // Smoothing factor within any PID loop
+
 #if ENABLED(PIDTEMP)
   //#define PID_AUTOTUNE_MENU // Add PID Autotune to the LCD "Temperature" menu to run M303 and apply the result.
   //#define PID_DEBUG // Sends debug data to the serial port.
@@ -384,9 +385,9 @@
   // #define  DEFAULT_Ki 1.38
   // #define  DEFAULT_Kd 62.40
 
-  #define DEFAULT_Kp 15.45
-  #define DEFAULT_Ki 1.07
-  #define DEFAULT_Kd 56.00
+  #define DEFAULT_Kp 16.28
+  #define DEFAULT_Ki 1.10
+  #define DEFAULT_Kd 60.00
 
   // Ultimaker
   //#define  DEFAULT_Kp 22.2
