@@ -441,9 +441,14 @@
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
   //Anycubic i3 Mega Ultrabase (0.9Ω @ 22°C)
-  #define DEFAULT_bedKp 187.45
-  #define DEFAULT_bedKi 35.75
-  #define DEFAULT_bedKd 245.71
+  // #define DEFAULT_bedKp 187.45
+  // #define DEFAULT_bedKi 35.75
+  // #define DEFAULT_bedKd 245.71
+
+  #define DEFAULT_bedKp 134.11
+  #define DEFAULT_bedKi 24.43
+  #define DEFAULT_bedKd 184.01
+
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
