@@ -385,12 +385,11 @@
   // #define  DEFAULT_Ki 1.38
   // #define  DEFAULT_Kd 62.40
 
-  #define DEFAULT_Kp 16.47
-  #define DEFAULT_Ki 1.15
-  #define DEFAULT_Kd 59.04
+  #define DEFAULT_Kp 14.48
+  #define DEFAULT_Ki 0.98
+  #define DEFAULT_Kd 53.67
 
-
-  // M301 P16.47 I1.15 D59.04
+  // M301 P14.48 I0.98 D53.67
 
   // Ultimaker
   //#define  DEFAULT_Kp 22.2
