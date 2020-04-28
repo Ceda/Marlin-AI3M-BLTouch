@@ -193,6 +193,40 @@
 				#define BTN_ENC 35  //the click switch
 				//not connected to a pin
 				#define SD_DETECT_PIN 49
+
+
+      #elif ENABLED(MINIPANEL)
+        // #define BEEPER_PIN 37
+        // // Pins for DOGM SPI LCD Support
+        // #define DOGLCD_A0  16
+        // #define DOGLCD_CS  17
+        // #define LCD_BACKLIGHT_PIN -1 // backlight LED on A11/D65
+        // #define LCD_RESET_PIN  23
+        // #define SDSS   53
+        //
+        // #define KILL_PIN -1
+        // #define LCD_CONTRAST 200
+        // #define BTN_EN1 31
+        // #define BTN_EN2 33
+        // #define BTN_ENC 35  //the click switch
+        //
+        // #define SD_DETECT_PIN 49
+
+        #define DOGLCD_A0           16
+        #define DOGLCD_CS           17
+        #define LCD_BACKLIGHT_PIN   27
+        #define LCD_RESET_PIN       23
+        // #define LCD_CONTRAST        127
+        #define SDSS                53
+        #define BEEPER_PIN          37
+        #define BTN_EN1             31
+        #define BTN_EN2             33
+        #define BTN_ENC             35
+        #define SD_DETECT_PIN       49
+        #define KILL_PIN            -1
+
+
+
 			#elif defined(MULTIPANEL)
 				//         #define BEEPER_PIN 37
 				// Pins for DOGM SPI LCD Support
