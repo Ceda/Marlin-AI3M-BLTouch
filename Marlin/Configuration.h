@@ -385,11 +385,11 @@
   // #define  DEFAULT_Ki 1.38
   // #define  DEFAULT_Kd 62.40
 
-  #define DEFAULT_Kp 14.48
-  #define DEFAULT_Ki 0.98
-  #define DEFAULT_Kd 53.67
+  #define DEFAULT_Kp 16.94
+  #define DEFAULT_Ki 1.17
+  #define DEFAULT_Kd 61.03
 
-  // M301 P14.48 I0.98 D53.67
+  // M301 P16.94 I1.17 D61.03
 
   // Ultimaker
   //#define  DEFAULT_Kp 22.2
@@ -635,7 +635,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 500, 500, 6, 30. }
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 6, 60 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -643,7 +643,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 2000, 1500,  60, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 3000, 2000,  60, 10000 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -653,9 +653,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          1200    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  1500    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   1200    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          1500    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
 
@@ -808,9 +808,15 @@
  *      O-- FRONT --+
  *    (0,0)
  */
-#define X_PROBE_OFFSET_FROM_EXTRUDER -2.7   // X offset: -left  +right  [of the nozzle]
-#define Y_PROBE_OFFSET_FROM_EXTRUDER -29.7  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.50   // Z offset: -below +above  [the nozzle]
+
+ // Stock X-Carriage
+// #define X_PROBE_OFFSET_FROM_EXTRUDER -2.7   // X offset: -left  +right  [of the nozzle]
+// #define Y_PROBE_OFFSET_FROM_EXTRUDER -29.7  // Y offset: -front +behind [the nozzle]
+// #define Z_PROBE_OFFSET_FROM_EXTRUDER -0.50   // Z offset: -below +above  [the nozzle]
+
+#define X_PROBE_OFFSET_FROM_EXTRUDER 29   // X offset: -left  +right  [of the nozzle]
+#define Y_PROBE_OFFSET_FROM_EXTRUDER -15  // Y offset: -front +behind [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER 0   // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 10
@@ -1991,7 +1997,7 @@
 
 // Enable Anycubic TFT
 // #define ANYCUBIC_TFT_MODEL
-#define ANYCUBIC_FILAMENT_RUNOUT_SENSOR
+// #define ANYCUBIC_FILAMENT_RUNOUT_SENSOR
 //#define ANYCUBIC_TFT_DEBUG
 
 #endif // CONFIGURATION_H
