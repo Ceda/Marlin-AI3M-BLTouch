@@ -628,7 +628,9 @@
  */
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 95.74 } // Stock extuder
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 391 } // Titan extuder
+// #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 391 } // Titan extuder
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 402.97 } // Titan aero extuder
+// M92 X80.00 Y80.00 Z400.00 E402.97
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -654,8 +656,8 @@
  *   M204 T    Travel Acceleration
  */
 #define DEFAULT_ACCELERATION          1500    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  1500    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   1500    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
 
