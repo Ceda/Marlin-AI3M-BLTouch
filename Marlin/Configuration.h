@@ -385,11 +385,11 @@
   // #define  DEFAULT_Ki 1.38
   // #define  DEFAULT_Kd 62.40
 
-  #define DEFAULT_Kp 16.94
-  #define DEFAULT_Ki 1.17
-  #define DEFAULT_Kd 61.03
+  #define DEFAULT_Kp 9.86
+  #define DEFAULT_Ki 0.42
+  #define DEFAULT_Kd 57.74
 
-  // M301 P16.94 I1.17 D61.03
+  // M301 P9.86 I0.42 D57.74
 
   // Ultimaker
   //#define  DEFAULT_Kp 22.2
@@ -1715,7 +1715,7 @@
 // RepRapDiscount FULL GRAPHIC Smart Controller
 // http://reprap.org/wiki/RepRapDiscount_Full_Graphic_Smart_Controller
 //
-//#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
+#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
 
 //
 // ReprapWorld Graphical LCD
@@ -1735,7 +1735,7 @@
 // MakerLab Mini Panel with graphic
 // controller and SD support - http://reprap.org/wiki/Mini_panel
 //
-#define MINIPANEL
+// #define MINIPANEL
 
 //
 // MaKr3d Makr-Panel with graphic controller and SD support.
