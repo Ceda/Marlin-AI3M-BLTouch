@@ -52,13 +52,12 @@ char *itostr2(const uint8_t &x)
   return _conv;
 }
 
+#define DIGIT(n) ('0' + (n))
+#define DIGIMOD(n, f) DIGIT((n)/(f) % 10)
+#define RJDIGIT(n, f) ((n) >= (f) ? DIGIMOD(n, f) : ' ')
+#define MINUSOR(n, alt) (n >= 0 ? (alt) : (n = -n, '-'))
+
 #ifndef ULTRA_LCD
-  #define DIGIT(n) ('0' + (n))
-  #define DIGIMOD(n, f) DIGIT((n)/(f) % 10)
-  #define RJDIGIT(n, f) ((n) >= (f) ? DIGIMOD(n, f) : ' ')
-  #define MINUSOR(n, alt) (n >= 0 ? (alt) : (n = -n, '-'))
-
-
   char* itostr3(const int x) {
     int xx = x;
     _conv[4] = MINUSOR(xx, RJDIGIT(xx, 100));
@@ -66,22 +65,21 @@ char *itostr2(const uint8_t &x)
     _conv[6] = DIGIMOD(xx, 1);
     return &_conv[4];
   }
-
-
-  // Convert signed float to fixed-length string with 023.45 / -23.45 format
-
-  char *ftostr32(const float &x) {
-    long xx = x * 100;
-    _conv[1] = MINUSOR(xx, DIGIMOD(xx, 10000));
-    _conv[2] = DIGIMOD(xx, 1000);
-    _conv[3] = DIGIMOD(xx, 100);
-    _conv[4] = '.';
-    _conv[5] = DIGIMOD(xx, 10);
-    _conv[6] = DIGIMOD(xx, 1);
-    return &_conv[1];
-  }
-
 #endif
+
+// Convert signed float to fixed-length string with 023.45 / -23.45 format
+
+char *ftostr32(const float &x) {
+  long xx = x * 100;
+  _conv[1] = MINUSOR(xx, DIGIMOD(xx, 10000));
+  _conv[2] = DIGIMOD(xx, 1000);
+  _conv[3] = DIGIMOD(xx, 100);
+  _conv[4] = '.';
+  _conv[5] = DIGIMOD(xx, 10);
+  _conv[6] = DIGIMOD(xx, 1);
+  return &_conv[1];
+}
+
 
 AnycubicTFTClass::AnycubicTFTClass() {
 }
@@ -125,13 +123,11 @@ void AnycubicTFTClass::Setup() {
 }
 
 void AnycubicTFTClass::WriteOutageEEPromData() {
-  int pos=E2END-256;
-
+  // int pos=E2END-256;
 }
 
 void AnycubicTFTClass::ReadOutageEEPromData() {
-  int pos=E2END-256;
-
+  // int pos=E2END-256;
 }
 
 void AnycubicTFTClass::KillTFT()
