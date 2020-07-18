@@ -14943,6 +14943,15 @@ void manage_inactivity(const bool ignore_stepper_queue/*=false*/) {
       SERIAL_ERRORLNPGM(MSG_KILL_BUTTON);
       kill(PSTR(MSG_KILLED));
     }
+
+    // KILL KEY = RESET
+    // ----------------------------------------------------------------
+    if (!READ(KILL_PIN))
+    {
+      //wdt_enable(WDTO_60MS);
+      asm volatile ("jmp 0"); // RESET
+      while(1) {}
+    }
   #endif
 
   #if HAS_HOME
