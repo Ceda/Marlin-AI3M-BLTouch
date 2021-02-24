@@ -630,7 +630,7 @@
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 95.74 } // Stock extuder
 
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 391 } // Titan extuder
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 402.97 } // Titan aero extuder
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 400, 402.97 } // Titan aero extuder
 // M92 X80.00 Y80.00 Z400.00 E402.97
 
 /**
